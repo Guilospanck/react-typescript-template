@@ -1,7 +1,12 @@
 import React from 'react';
 
-const SignIn = () => (
-    <h1>SignIn</h1>
-);
+import SignInView from './views';
+import useSignInViewModel from './viewModels/signinViewModel';
+
+const SignIn = () => {
+    const signinViewModel = useSignInViewModel();
+
+    return <SignInView viewModel={signinViewModel} />;
+};
 
 export default SignIn;
